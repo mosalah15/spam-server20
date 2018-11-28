@@ -1,1 +1,1 @@
-# spam-server20
+# credit
