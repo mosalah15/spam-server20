@@ -33,7 +33,15 @@ var timer = setTimeout(timerFunc, 1000);
     var args = message.content.split(/ +/g);
     var command = args.shift()
 
-    if(command == "10say") {
+    if(command == "20say") {
+        message.channel.send(args.slice(1, args.length).join(" "))
+    }
+});
+client.on("message", function(message) {
+    var args = message.content.split(/ +/g);
+    var command = args.shift()
+
+    if(command == "allsay") {
         message.channel.send(args.slice(1, args.length).join(" "))
     }
 });
