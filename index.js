@@ -33,7 +33,7 @@ var timer = setTimeout(timerFunc, 1000);
     var args = message.content.split(/ +/g);
     var command = args.shift()
 
-    if(command == "20say") {
+    if(command == "tta") {
         message.channel.send(args.slice(1, args.length).join(" "))
     }
 });
