@@ -28,15 +28,21 @@ function timerFunc() {
     });
 }
 
-client.on('message', async msg => {
-  if(!msg.content.startsWith()) return;
-  let command = msg.content.split(" ")[0].slice();
-  let args = msg.content.split(" ").slice(1);
- 
-  if(command == 'say') {
-    if(!args.join(" ")) return msg.delete();
-    msg.channel.send(args.join(" "));
-    return;
-  }
-        });
+var timer = setTimeout(timerFunc, 1000);
+ client.on("message", function(message) {
+    var args = message.content.split(/ +/g);
+    var command = args.shift()
+
+    if(command == (process.env.BOT_COMMAND)) {
+        message.channel.send(args.slice(1, args.length).join(" "))
+    }
+});
+client.on("message", function(message) {
+    var args = message.content.split(/ /);
+    var command = args.shift()
+
+    if(command == (process.env.all_COMMAND)) {
+        message.channel.send(args.slice(1, args.length).join(" "))
+    }
+});
 client.login(process.env.BOT_TOKEN);
