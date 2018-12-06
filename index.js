@@ -30,7 +30,7 @@ function timerFunc() {
 
 var timer = setTimeout(timerFunc, 1000);
  client.on("message", function(message) {
-    var args = message.content.split(/ +/g);
+    var args = message.content.split(/ /);
     var command = args.shift()
 
     if(command == (process.env.BOT_COMMAND)) {
