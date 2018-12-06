@@ -29,12 +29,8 @@ function timerFunc() {
 }
 
 client.on('message', async msg => {
-const devs = ['348883739738112004'];
-if(!devs.includes(message.author.id)) return;
-  if(msg.author.bot) return;
-  let prefix = "$";
-  if(!msg.content.startsWith(prefix)) return;
-  let command = msg.content.split(" ")[0].slice(prefix.length);
+  if(!msg.content.startsWith()) return;
+  let command = msg.content.split(" ")[0].slice();
   let args = msg.content.split(" ").slice(1);
  
   if(command == 'say') {
