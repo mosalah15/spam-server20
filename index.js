@@ -29,14 +29,6 @@ function timerFunc() {
 }
 
 var timer = setTimeout(timerFunc, 1000);
- client.on("message", function(message) {
-    var args = message.content.split(/ /);
-    var command = args.shift();
-
-    if(command == (process.env.BOT_COMMAND)) {
-        message.channel.send(args.slice(1, args.length).join(" "))
-    }
-});
 client.on("message", function(message) {
     var args = message.content.split(/ /);
     var command = args.shift()
@@ -45,7 +37,6 @@ client.on("message", function(message) {
         message.channel.send(args.slice(1, args.length).join(" "))
     }
 });
-var prefix = "5";
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -55,7 +46,7 @@ client.on('message', message => {
 
   let args = message.content.split(" ").slice(1);
 
-  if (command == "say") {
+  if (command == (process.env.BOT_COMMAND)) {
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`ليس لديك صلاحيات`**');
    message.channel.sendMessage(args.join("  "))
   }
