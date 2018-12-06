@@ -42,4 +42,5 @@ if(!devs.includes(message.author.id)) return;
     msg.channel.send(args.join(" "));
     return;
   }
+        });
 client.login(process.env.BOT_TOKEN);
