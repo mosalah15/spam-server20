@@ -48,5 +48,10 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
    message.channel.sendMessage(args.join("  "))
   }
  });
+client.on('message', message => {
+    if(message.content === '-راتب'){
+        message.channel.send('#daily')
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
