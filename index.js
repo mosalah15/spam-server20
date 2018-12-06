@@ -48,9 +48,5 @@ if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('
    message.channel.sendMessage(args.join("  "))
   }
  });
-client2.on('message', message => {
-    if(message.content === '-ريب'){
-        message.channel.send('#rip @MoDAMer')
-    }
-});
+
 client.login(process.env.BOT_TOKEN);
