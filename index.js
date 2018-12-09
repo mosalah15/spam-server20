@@ -55,7 +55,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if(message.content === '-جرب'){
-        message.channel.send('#rep @${message.author.id}')
+        message.channel.send('#rep @${message.author.username}')
     }
 });
 client.login(process.env.BOT_TOKEN);
