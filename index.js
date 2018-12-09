@@ -54,8 +54,8 @@ client.on('message', message => {
     }
 });
 client.on('message', message => {
-    if(message.content === '-جرب'){
-        message.channel.send('#rep @${message.author.username}')
+    if(message.content === 'جرب'){
+        message.channel.send('#rep <@!348883739738112004>')
     }
 });
 client.login(process.env.BOT_TOKEN);
