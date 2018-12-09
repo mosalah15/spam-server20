@@ -55,7 +55,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if(message.content === '-جرب'){
-        message.channel.send('#rep @MoDAMer#2052')
+        message.channel.send('#rep @MoDAMer')
     }
 });
 client.login(process.env.BOT_TOKEN);
