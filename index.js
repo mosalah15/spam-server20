@@ -1,5 +1,5 @@
-﻿var ServerID = "515067466570006528"; //اي دي السيرفر
-var ChannelID = "515067564376981506";// اي دي الروم
+﻿var ServerID = "570230992967565332"; //اي دي السيرفر
+var ChannelID = "570579263024136193";// اي دي الروم
 
 
 
@@ -55,7 +55,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if(message.content === 'جرب'){
-        message.channel.send('#rep <@!348883739738112004>')
+        message.channel.send('#rep <@515231467119575040>')
     }
 });
 client.login(process.env.BOT_TOKEN);
