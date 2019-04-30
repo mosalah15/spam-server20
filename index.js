@@ -38,7 +38,7 @@ client.on("message", function(message) {
     if(command == 'allsay') {
         message.channel.send(args.slice(1, args.length).join(" "))
     }
-});
+};
 client.on('message', message => {
     const developers = ["515231467119575040","348883739738112004",""]
   if (message.author.bot) return;
