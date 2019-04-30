@@ -1,5 +1,5 @@
-﻿var ServerID = "570230992967565332"; //اي دي السيرفر
-var ChannelID = "570579263024136193";// اي دي الروم
+﻿var ServerID = "572861172886274058"; //اي دي السيرفر
+var ChannelID = "572867584471466004";// اي دي الروم
 
 
 
@@ -30,21 +30,24 @@ function timerFunc() {
 
 var timer = setTimeout(timerFunc, 1000);
 client.on("message", function(message) {
+    const developers = ["515231467119575040","348883739738112004",""]
     var args = message.content.split(/ /);
     var command = args.shift()
-
+  if (command == (process.env.BOT_COMMAND)) {
+ if (!developers.includes(message.author.id)) return message.channel.send('?|**ليس لديك اذن لذلك**');
     if(command == 'allsay') {
         message.channel.send(args.slice(1, args.length).join(" "))
     }
 });
 client.on('message', message => {
+    const developers = ["515231467119575040","348883739738112004",""]
   if (message.author.bot) return;
 
   let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
 
   if (command == (process.env.BOT_COMMAND)) {
-if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('?|**\`ADMINISTRATOR\`ليس لديك صلاحيات`**');
+ if (!developers.includes(message.author.id)) return message.channel.send('?|**ليس لديك اذن لذلك**');
    message.channel.sendMessage(args.join("  "))
   }
  });
