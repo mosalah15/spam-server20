@@ -101,10 +101,12 @@ client.on('ready', async(message, args)=> {
             message.member.voiceChannel.join()
             .then (connection =>{
                 var server = servers[message.guild.id];
-                server.queue.push(args);
                 message.reply('successfly added');
+                server.queue.push(args);
                 Play (connection, message);
             })
         }
+})
+    }
 });
 client.login(process.env.BOT_TOKEN);
