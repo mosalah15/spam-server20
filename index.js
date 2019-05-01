@@ -93,6 +93,7 @@ client.on('message', message=> {
     if(message.member.voiceChannel) {
 message.member.voiceChannel.join().play(ytdl(args), {filter: "audioonly"});
     }
+      }    
       });
 
 client.login(process.env.BOT_TOKEN);
