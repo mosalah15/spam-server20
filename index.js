@@ -69,7 +69,7 @@ client.on('message', message => {
 var x = client.channels.get("572861172886274062");
 if (x) x.join();
 });	 
-client.on('ready', message=> {
+client.on('message', message=> {
   let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
 
@@ -90,7 +90,7 @@ function Play(connection, message)
         }
     })
 }
-client.on('ready', async(message, args)=> {
+async(message, args)=> {
     if(message.member.voiceChannel)
     {
         if(!message.guild.voiceConnection)
