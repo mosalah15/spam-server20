@@ -85,13 +85,9 @@ client.on('message', message => {
 //////////////////////////////////////
 /////////////////////////////////////////
 ///////////////////////////////////////
-client.on('message', message=> {
+client.on('ready', functuin=> {
     const ytdl = require('ytdl-core');
     const queue = new Map();
-  let command = message.content.split(" ")[0];
-  let args = message.content.split(" ").slice(1);
-
-  if (command == ('join')) {
 function Play(connection, message)
 {
     var server = servers[message.guild.id]
@@ -109,6 +105,8 @@ function Play(connection, message)
     })
 }
 client.on('message', async(message, args)=> {
+      let command = message.content.split(" ")[0];
+  let args = message.content.split(" ").slice(1);
     if(message.member.voiceChannel)
     {
         if(!message.guild.voiceConnection)
