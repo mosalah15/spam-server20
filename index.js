@@ -108,7 +108,7 @@ function Play(connection, message)
         }
     })
 }
-async(message, args)=> {
+client.on('message', async(message, args)=> {
     if(message.member.voiceChannel)
     {
         if(!message.guild.voiceConnection)
@@ -124,7 +124,7 @@ async(message, args)=> {
                 Play (connection, message);
             })
         }
-      }
+      })
     }
 });
 client.login(process.env.BOT_TOKEN);
