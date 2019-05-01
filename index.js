@@ -90,8 +90,7 @@ function Play(connection, message)
         }
     })
 }
-client.on('ready', message=> {
-async run(message, args)
+client.on('ready', async(message, args)=> {
 {
     if(message.member.voiceChannel)
     {
