@@ -262,9 +262,8 @@ const prefix = ('1')
 
 	return undefined;
 });
-
 async function handleVideo(video, msg, voiceChannel, playlist = false) {
-	const serverQueue = queue.get(msg.guild.id);
+	const serverQueue = new Map().get(msg.guild.id);
 	console.log(video);
 	
 
