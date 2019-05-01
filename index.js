@@ -90,7 +90,7 @@ client.on('ready', functuin=> {
     const queue = new Map();
 function Play(connection, message)
 {
-    var server = servers[message.guild.id]
+    var server = [message.guild.id]
     server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter: "audioonly"}))
     server.queue.shift();
     server.dispatcher.on("end", function(){
@@ -105,18 +105,19 @@ function Play(connection, message)
     })
 }
 client.on('message', async(message, args)=> {
+    var guild = client.guilds.find('572861172886274058');
   let command = message.content.split(" ")[0];
       if (command == ('join')) {
     if(message.member.voiceChannel)
     {
         if(!message.guild.voiceConnection)
         {
-            if(!servers[message.guild.id])
-            servers[message.guild.id] = {queue: []}
+            if(!guild.id)
+            guild = {queue: []}
             }
             message.member.voiceChannel.join()
             .then (connection =>{
-                var server = servers[message.guild.id];
+                var server = client.guilds.find('572861172886274058');
                 message.reply('successfly added');
                 server.queue.push(args);
                 Play (connection, message);
@@ -125,4 +126,5 @@ client.on('message', async(message, args)=> {
       }
     })
 });
+
 client.login(process.env.BOT_TOKEN);
