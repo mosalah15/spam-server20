@@ -85,46 +85,14 @@ client.on('message', message => {
 //////////////////////////////////////
 /////////////////////////////////////////
 ///////////////////////////////////////
-client.on('ready', functuin=> {
-    const ytdl = require('ytdl-core');
-    const queue = new Map();
-function Play(connection, message)
-{
-    var server = [message.guild.id]
-    server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter: "audioonly"}))
-    server.queue.shift();
-    server.dispatcher.on("end", function(){
-        if(server.queue[0])
-        {
-            Play(connection,message);
-        }
-        else
-        {
-            connection.disconnect();
-        }
-    })
-}
-client.on('message', async(message, args)=> {
-    var guild = client.guilds.find('572861172886274058');
+
+client.on('message', message=> {
   let command = message.content.split(" ")[0];
+  let args = message.content.split(" ").slice(1);
       if (command == ('join')) {
-    if(message.member.voiceChannel)
-    {
-        if(!message.guild.voiceConnection)
-        {
-            if(!guild.id)
-            guild = {queue: []}
-            }
-            message.member.voiceChannel.join()
-            .then (connection =>{
-                var server = client.guilds.find('572861172886274058');
-                message.reply('successfly added');
-                server.queue.push(args);
-                Play (connection, message);
-            })
-        }
-      }
-    })
-});
+    if(message.member.voiceChannel) {
+message.member.voiceChannel.join().play(ytdl(args), {filter: "audioonly"});
+    }
+      });
 
 client.login(process.env.BOT_TOKEN);
