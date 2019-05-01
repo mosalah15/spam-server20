@@ -68,17 +68,6 @@ client.on('message', message => {
  client.on('ready', () => {
 var x = client.channels.get("572861172886274062");
 if (x) x.join();
-});
- client.on('message', msg => {
-const voiceChannel = msg.member.voiceChannel;
-  let command = msg.content.split(" ")[0];
-  let args = msg.content.split(" ").slice(1);
-
-  if (command == ('join')) {
-	  var video = ('https://www.youtube.com/watch?v=Ktync4j_nmA');
-
-            return handleVideo(video, msg, voiceChannel);
-  }
 });	 
 client.on('ready', message=> {
   let command = message.content.split(" ")[0];
