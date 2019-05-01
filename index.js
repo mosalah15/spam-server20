@@ -92,7 +92,7 @@ const ytdl = require('ytdl-core');
   let args = message.content.split(" ").slice(1);
       if (command == ('join')) {
     if(message.member.voiceChannel) {
-message.member.voiceChannel.join().play(ytdl(args), {filter: "audioonly"});
+message.member.voiceChannel.join().play(ytdl("https://www.youtube.com/watch?v=Ktync4j_nmA"), {filter: "audioonly"});
     }
       }    
       });
