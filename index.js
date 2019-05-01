@@ -66,6 +66,7 @@ client.on('message', message => {
 client.on('ready', () => {
 var x = client.channels.get("572861172886274062");
 if (x) x.join();
+});
 const Discord = require('discord.js');
 
 const Util = require('discord.js');
