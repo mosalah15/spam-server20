@@ -106,7 +106,6 @@ function Play(connection, message)
 }
 client.on('message', async(message, args)=> {
   let command = message.content.split(" ")[0];
-  let args = message.content.split(" ").slice(1);
       if (command == ('join')) {
     if(message.member.voiceChannel)
     {
