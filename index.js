@@ -87,6 +87,7 @@ client.on('message', message => {
 ///////////////////////////////////////
 
 client.on('message', message=> {
+const ytdl = require('ytdl-core');
   let command = message.content.split(" ")[0];
   let args = message.content.split(" ").slice(1);
       if (command == ('join')) {
