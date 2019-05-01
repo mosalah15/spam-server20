@@ -106,6 +106,7 @@ async(message, args)=> {
                 Play (connection, message);
             })
         }
+      }
     }
 });
 client.login(process.env.BOT_TOKEN);
