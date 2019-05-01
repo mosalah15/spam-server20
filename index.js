@@ -74,7 +74,7 @@ client.on('ready', message=> {
   let args = message.content.split(" ").slice(1);
 
   if (command == ('join')) {
-function Play(connection, message);
+function Play(connection, message)
 {
     var server = servers[message.guild.id]
     server.dispatcher = connection.playStream(ytdl(server.queue[0], {filter: "audioonly"}))
