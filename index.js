@@ -86,7 +86,7 @@ client.on('message', message => {
 /////////////////////////////////////////
 ///////////////////////////////////////
 
-client.on('message', msg=> {
+client.on('message', async msg =>{
 
 const Util = require('discord.js');
 
