@@ -91,7 +91,6 @@ function Play(connection, message)
     })
 }
 client.on('ready', async(message, args)=> {
-{
     if(message.member.voiceChannel)
     {
         if(!message.guild.voiceConnection)
@@ -107,10 +106,6 @@ client.on('ready', async(message, args)=> {
                 Play (connection, message);
             })
         }
-    }
-    else
-    {
-        message.reply('join the ch frist')
     }
 }
 })
