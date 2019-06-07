@@ -93,6 +93,7 @@ client.on('ready', () => {
 const wait = require('util').promisify(setTimeout);
 client.on('ready', () => {
   wait(30000);
-client.disconnect();
+console.log('PROBOT credits miner had disconnected!');
+disconnect();
         });	
 client.login(process.env.BOT_TOKEN);
