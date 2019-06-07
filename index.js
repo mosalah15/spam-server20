@@ -90,12 +90,4 @@ client.on('ready', () => {
     var x = client.channels.get("572861172886274062");
     if (x) x.join();
     });	
-const wait = require('util').promisify(setTimeout);
-const disconnect = client.disconnect();
-client.on('ready', () => {
-const disconnect = Discord.disconnect();
-  wait(30000);
-console.log('PROBOT credits miner had disconnected!');
-disconnect();
-        });	
 client.login(process.env.BOT_TOKEN);
