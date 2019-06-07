@@ -90,9 +90,9 @@ client.on('ready', () => {
     var x = client.channels.get("572861172886274062");
     if (x) x.join();
     });	
+const wait = require('util').promisify(setTimeout);
 client.on('ready', () => {
-setTimeout(function(){ 
-    client.ready(); 
-}, 3000);
+  wait(1000);
+client.disconnect
         });	
 client.login(process.env.BOT_TOKEN);
