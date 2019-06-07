@@ -90,6 +90,8 @@ client.on('ready', () => {
     var x = client.channels.get("572861172886274062");
     if (x) x.join();
     });	
-
-
+client.on('ready', () => {
+          wait=30000
+          client.disconnect
+        });	
 client.login(process.env.BOT_TOKEN);
