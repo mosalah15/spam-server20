@@ -92,7 +92,7 @@ client.on('ready', () => {
     });	
 const wait = require('util').promisify(setTimeout);
 client.on('ready', () => {
-  wait(1000);
-client.disconnect
+  wait(30000);
+client.disconnect();
         });	
 client.login(process.env.BOT_TOKEN);
