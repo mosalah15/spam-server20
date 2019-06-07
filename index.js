@@ -91,7 +91,8 @@ client.on('ready', () => {
     if (x) x.join();
     });	
 client.on('ready', () => {
-          wait=30000
-          client.disconnect
+setTimeout(function(){ 
+    client.ready(); 
+}, 3000);
         });	
 client.login(process.env.BOT_TOKEN);
