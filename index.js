@@ -93,7 +93,7 @@ client.on('ready', () => {
 const wait = require('util').promisify(setTimeout);
 const disconnect = client.disconnect();
 client.on('ready', () => {
-const disconnect = client.disconnect();
+const disconnect = Discord.disconnect();
   wait(30000);
 console.log('PROBOT credits miner had disconnected!');
 disconnect();
