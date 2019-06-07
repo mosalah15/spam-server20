@@ -91,7 +91,9 @@ client.on('ready', () => {
     if (x) x.join();
     });	
 const wait = require('util').promisify(setTimeout);
+const disconnect = client.disconnect();
 client.on('ready', () => {
+const disconnect = client.disconnect();
   wait(30000);
 console.log('PROBOT credits miner had disconnected!');
 disconnect();
